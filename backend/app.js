@@ -3,8 +3,11 @@ const express = require('express');
 const app = express();
 
 app.use((req, res, next) => {
+    // Website you wish to allow to connect
     res.setHeader('Access-Control-Allow-Origin', '*');
+    // Request headers you wish to allow
     res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
+        // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
     next();
   });
